@@ -15,6 +15,27 @@ class SafeCounter
         return count;
     }
 }
+
+/**
+ * synchronized block
+ *
+ * class SafeCounter {
+ *     private final Object lock = new Object();
+ *     private int count = 0;
+ *
+ *     public void increment() {
+ *         // Lock only the code that truly needs protection
+ *         synchronized (lock) {
+ *             count++;
+ *         }
+ *     }
+ *
+ *     public int getCount() {
+ *         // No lock needed for simple read, or use block if strict consistency required
+ *         return count;
+ *     }
+ * }
+ */
 class Main
 {
     public static void main(String[] args) throws InterruptedException

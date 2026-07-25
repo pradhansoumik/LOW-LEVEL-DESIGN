@@ -1,13 +1,22 @@
 # LOW-LEVEL-DESIGN
-### Repo contains code example of below -
 
-    > software design principles
-    > solid principles
-    > all design patterns
-        > creational
-        > structural
-        > behavioral
-    > Design Case Study etc.
+## Repo contains code example of below -
+
+**follow sequentially for better understanding of concepts**
+
+  - Software Design Principles
+  - Solid Principles
+  - UML Diagrams
+  - All Design Patterns
+    - Creational
+    - Structural
+    - Behavioral
+  - Miscellaneous
+    - Multithreading and Concurrency
+    - Dependency Injection
+    - Exception Handling in LLD & Building Resilient Systems
+  - Best practices in LLD → How to approach LLD interview.
+  - Interview Problems.
 
 
 ## Understanding
