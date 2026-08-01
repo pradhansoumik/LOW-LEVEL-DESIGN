@@ -1,0 +1,23 @@
+## Behavioral Patterns
+
+These are concerned with object interaction and responsibility - how they communicate and assign responsibilities while ensuring loose coupling.
+
+**Real-World Analogy**
+
+Think of a restaurant. The waiter takes your order and passes it to the kitchen. You don't talk directly to the chef - the waiter acts as a mediator between you and the kitchen.
+
+This reflects the Mediator Pattern, which defines an object that controls communication between other objects, preventing tight interdependencies.
+
+**Examples include:**
+
+  - Observer Pattern
+  - Strategy Pattern
+  - Interpreter Pattern
+  - Command Pattern
+  - Chain of Responsibility
+  - Mediator Pattern
+  - State Pattern
+  - Template Method
+  - Visitor Pattern
+  - Iterator Pattern
+  - Memento Pattern
