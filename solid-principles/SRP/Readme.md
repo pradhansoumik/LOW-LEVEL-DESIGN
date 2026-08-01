@@ -61,8 +61,8 @@ public void saveEmpData() {
 
 **Solution:**
 
-1. **Facade Pattern**
-2. **Break / Decompose the Classes**
+1. Facade Pattern
+2. Break / Decompose the Classes
 
 ---
 

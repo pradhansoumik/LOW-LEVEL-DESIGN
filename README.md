@@ -15,8 +15,15 @@
     - Multithreading and Concurrency
     - Dependency Injection
     - Exception Handling in LLD & Building Resilient Systems
-  - Best practices in LLD → How to approach LLD interview.
-  - Interview Problems.
+  - Best practices in LLD
+    - All about API's
+    - Database Design & Integration.
+    - How to approach LLD interview.
+  - Interview Problems / Case Studies.
+    - Parking Lot System
+    - Logging Framework
+    - Traffic Signal System
+    - 
 
 
 ## Understanding

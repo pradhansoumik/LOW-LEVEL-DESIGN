@@ -8,7 +8,7 @@
 - This means that any subclass should be substitutable for its parent class without breaking the functionality.
 - Liskov Principle is used to check if Inheritance is done properly
    - Correct Inheritance: Not Violate LSP
-   - InCorrect Inheritance: Violate LSP
+   - Incorrect Inheritance: Violate LSP
 
       ```
      Inheritance:
