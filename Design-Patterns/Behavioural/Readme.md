@@ -1,6 +1,8 @@
 ## Behavioral Patterns
 
-These are concerned with object interaction and responsibility - how they communicate and assign responsibilities while ensuring loose coupling.
+- This Pattern defines the rules of conversation between objects. It is concerned with the assignment of responsibilities between objects and how they communicate with each other.
+- These are concerned with object interaction and responsibility - how they communicate and assign responsibilities while ensuring loose coupling.
+- Behavioral design patterns focus on objects - Who Does What.
 
 **Real-World Analogy**
 
