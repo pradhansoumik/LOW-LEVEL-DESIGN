@@ -37,6 +37,12 @@
     - Slightly more complex to implement. Lazy Loading is Not thread-safe by default. Thus, it requires synchronization in multi-threaded environments.
 
 ---
+Lazy Loading:
+
+- Thread Safety
+  - Synchronized Method
+  - Double-Checked Locking
+  - Bill Pugh Singleton
 
 Let's say two threads simultaneously call getInstance() for the first time in a lazy-loaded Singleton. If the instance hasn't been created yet, both threads might pass the null check and end up creating two different instances - completely breaking the Singleton guarantee.
 
