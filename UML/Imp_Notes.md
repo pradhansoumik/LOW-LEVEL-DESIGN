@@ -19,10 +19,22 @@ Visibility markers define access levels for attributes and operations:
 **Attributes and Method System:**
 
 Attributes:
+- visibility name: Type [multiplicity] = DefaultValue
+  - visibility: The visibility marker (e.g., +, -, #, ~).
+  - name: The name of the attribute.
+  - Type: The data type of the attribute (e.g., int, String).
+  - multiplicity: An optional field indicating how many instances of the attribute can exist (e.g., 0..1, 1..*, etc.).
+  - DefaultValue: An optional default value for the attribute.
 
 ![img_1.png](img_1.png)
 
 Methods (Operations):
+- visibility name(parameterName1: Type1,...): ReturnType
+  - visibility: The visibility marker (e.g., +, -, #, ~).
+  - name: The name of the method.
+  - parameterName1: The name of the first parameter.
+  - Type1: The data type of the first parameter.
+  - ReturnType: The data type of the return value.
 
 ```java
 class Person {
