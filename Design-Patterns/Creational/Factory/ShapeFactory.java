@@ -20,13 +20,18 @@ class Square implements Shape {
 }
 
 // Factory Class
-class ShapeFactory {
+class ShapeFactory
+{
     /* Method that takes the type of shape as input
     and returns the cirresponding object */
-    public Shape getShape(String shapeType) {
-        if (shapeType.equalsIgnoreCase("CIRCLE")) {
+    public Shape getShape(String shapeType)
+    {
+        if (shapeType.equalsIgnoreCase("CIRCLE"))
+        {
             return new Circle();
-        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
+        }
+        else if (shapeType.equalsIgnoreCase("SQUARE"))
+        {
             return new Square();
         }
         return null;
@@ -34,8 +39,10 @@ class ShapeFactory {
 }
 
 // Driver code
-class Main {
-    public static void main(String[] args) {
+class Main
+{
+    public static void main(String[] args)
+    {
         // Object of ShapeFactory is initialized
         ShapeFactory shapeFactory = new ShapeFactory();
 
