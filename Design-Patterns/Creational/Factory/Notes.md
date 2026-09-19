@@ -15,3 +15,10 @@ You (the client), don't care how it's made or what specific class of ingredients
 This is exactly what the Factory Pattern does in code: it creates an object based on some input without exposing the instantiation logic to the client.
 
 ---
+**Basic Structure of Factory Pattern:**
+
+The Factory Pattern typically consists of the following components:
+
+- Product: It is an interface or abstract class that defines the methods the product must implement.
+- Concrete Products: The concrete classes that implement the Product interface.
+- Factory: A class with a method that returns different concrete products based on input.
