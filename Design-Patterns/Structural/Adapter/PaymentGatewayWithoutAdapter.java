@@ -1,7 +1,7 @@
 import java.util.*;
 
 // Target Interface:
-// Standard interface expected by the CheckoutService
+// Standard interface expected by the client (CheckoutService)
 interface PaymentGateway
 {
     void pay(String orderId, double amount);
