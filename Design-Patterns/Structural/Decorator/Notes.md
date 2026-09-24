@@ -54,3 +54,22 @@ The Decorator Pattern is particularly useful in scenarios where flexibility, mod
 - `You want to follow the Open/Closed Principle (OCP)`: The pattern supports the OCP by allowing classes to be open for extension but closed for modification. You enhance behavior without altering existing code.
 - `You want reusable and composable behaviors`: Decorators can be reused across different components and can be composed in various combinations to achieve desired functionality.
 - `You need layered, step-by-step enhancements`: Decorators can be applied one after another, layering features gradually in a controlled and traceable way—much like wrapping layers around an object.
+
+---
+**Advantages:**
+
+A few advantages of using the Decorator Pattern are:
+
+- Adheres to the Open/Closed Principle (OCP): Enhancements can be made without modifying existing code, supporting scalability and maintainability.
+- Runtime Flexibility to Compose Features: Behaviors can be added or removed dynamically, allowing for highly customizable solutions.
+- Avoids Subclass Explosion: Instead of creating multiple subclasses for every feature combination, decorators provide a cleaner, more modular approach.
+- Promotes Single Responsibility for Each Add-on: Each decorator focuses on a specific functionality, leading to better code organization and readability.
+
+**Disadvantages:**
+
+A few trade-offs while using the Decorator Pattern are:
+
+- Can Result in Many Small Classes: Each feature typically requires its own decorator class, which can clutter the codebase.
+- Stack Trace Debugging is Difficult: Debugging layered decorators can be challenging, as stack traces may become complex and harder to trace.
+- Overhead of Multiple Wrapping Classes: Composing many decorators can introduce runtime overhead and make the class structure harder to follow.
+- Developers Must Understand Decorator Flow: Proper implementation requires developers to grasp the decorator chaining logic, which may introduce a learning curve.
