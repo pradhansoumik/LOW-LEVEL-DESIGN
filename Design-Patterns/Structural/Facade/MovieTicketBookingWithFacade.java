@@ -90,3 +90,11 @@ class Main
         movieBookingFacade.bookMovieTicket("user123", "movie456", "A10", "user@example.com", 500);
     }
 }
+/**
+ * How Facade Pattern Solves the Issue
+ * By introducing MovieBookingFacade, we:
+     * Provide a simple, unified interface (bookMovieTicket()).
+     * Hide the complexity of internal service calls from the client.
+     * Reduce coupling, so changes in internal services don't affect the client.
+     * Centralize the workflow logic, making it easier to update and reuse.
+ */
