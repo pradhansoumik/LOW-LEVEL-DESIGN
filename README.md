@@ -22,8 +22,7 @@
   - Interview Problems / Case Studies.
     - Parking Lot System
     - Logging Framework
-    - Traffic Signal System
-    - 
+    - Traffic Signal System etc.
 
 
 ## Understanding

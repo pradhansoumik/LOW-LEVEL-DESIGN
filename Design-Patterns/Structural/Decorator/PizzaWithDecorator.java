@@ -1,13 +1,15 @@
 import java.util.*;
 
 // =========== Component Interface ============
-interface Pizza {
+interface Pizza
+{
     String getDescription();
     double getCost();
 }
 
 // ============= Concrete Components: Base pizza ==============
-class PlainPizza implements Pizza {
+class PlainPizza implements Pizza
+{
     @Override
     public String getDescription() {
         return "Plain Pizza";
@@ -19,7 +21,8 @@ class PlainPizza implements Pizza {
     }
 }
 
-class MargheritaPizza implements Pizza {
+class MargheritaPizza implements Pizza
+{
     @Override
     public String getDescription() {
         return "Margherita Pizza";
@@ -34,7 +37,8 @@ class MargheritaPizza implements Pizza {
 
 // ======================== Abstract Decorator ===========================
 // ====== Implements Pizza and holds a reference to a Pizza object =======
-abstract class PizzaDecorator implements Pizza {
+abstract class PizzaDecorator implements Pizza
+{
     protected Pizza pizza;
 
     public PizzaDecorator(Pizza pizza) {
@@ -43,7 +47,8 @@ abstract class PizzaDecorator implements Pizza {
 }
 
 // ============ Concrete Decorator: Adds Extra Cheese ================
-class ExtraCheese extends PizzaDecorator {
+class ExtraCheese extends PizzaDecorator
+{
     public ExtraCheese(Pizza pizza) {
         super(pizza);
     }
@@ -95,7 +100,8 @@ class StuffedCrust extends PizzaDecorator {
 
 
 // Driver code
-public class Main {
+public class Main
+{
     public static void main(String[] args) {
         // Start with a basic Margherita Pizza
         Pizza myPizza = new MargheritaPizza();
