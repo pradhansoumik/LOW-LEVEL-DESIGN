@@ -5,7 +5,7 @@ The Command Pattern is a behavioral design pattern that turns a request into a s
 ---
 **Formal Definition:**
 
-The Command Pattern is a behavioral design pattern that encapsulates a request as an object, allowing for parameterization of clients with different requests, queuing of requests, and logging of the requests. It lets you add features like undo, redo, logging, and dynamic command execution without changing the core business logic.
+The Command Pattern is a behavioral design pattern that **encapsulates a request as an object**, allowing for parameterization of clients with different requests, queuing of requests, and logging of the requests. It **lets you add features like undo, redo, logging, and dynamic command execution** without changing the core business logic.
 
 This allows you to execute commands at a later time, in a flexible manner, without having to interact directly with the request's execution details.
 
