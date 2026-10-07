@@ -9,10 +9,8 @@
  */
 
 // Using Setter Injection
-class OrderService4
+class OrderService
 {
-    /*
-
     private PaymentService payment;
 
     // Setter method to inject dependencies
@@ -26,6 +24,5 @@ class OrderService4
         payment.process(order);
     }
 
-     */
 }
 

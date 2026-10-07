@@ -9,14 +9,14 @@
  */
 
 // Interface to inject PaymentService dependency
-interface PaymentInjectable
+public interface PaymentInjectable
 {
     // Method to inject PaymentService
     void injectPayment(PaymentService payment);
 }
 
 // Using Interface Injection
-class OrderService5 implements PaymentInjectable
+public class OrderService implements PaymentInjectable
 {
     private PaymentService payment;
 
@@ -27,18 +27,8 @@ class OrderService5 implements PaymentInjectable
         this.payment = payment; // Set the injected payment service
     }
 
-
     public void checkout(Order order)
     {
         payment.process(order);
     }
-}
-class PaymentService
-{
-    public void process(Order order){
-
-    }
-}
-class Order{
-
 }
