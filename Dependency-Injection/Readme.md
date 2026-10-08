@@ -8,6 +8,24 @@ In today's world of software development, building scalable and maintainable sys
 ---
 **Understanding:**
 
+The Problem:
+
+Imagine we are building an OrderService and we write the following code:
+```java
+class OrderService
+{
+   private InventoryService inventory = new InventoryService();
+   private PaymentService payment = new RazorpayPayment();
+   private NotificationService notification = new NotificationService();
+
+   public void checkout(Order order) {
+      inventory.blockItems(order);
+      payment.process(order);
+      notification.sendConfirmation(order);
+   }
+}
+```
+
 **What are Dependencies?**
 
 In software design, a dependency refers to any object that a class needs in order to function properly. For example, in our earlier OrderService, the dependencies are InventoryService, PaymentService, and NotificationService. These services are needed for the OrderService to carry out its checkout operation.
