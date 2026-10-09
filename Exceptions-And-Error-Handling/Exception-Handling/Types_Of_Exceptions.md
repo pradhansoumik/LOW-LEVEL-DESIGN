@@ -1,7 +1,7 @@
 ## Types of Exceptions
 
 ---
-**Checked Exceptions**
+### Checked Exceptions
 
 A Checked Exception is a type of exception in programming that is explicitly checked by the compiler during the compilation process. These exceptions are typically errors that a program might encounter during its normal operation, and the compiler forces the programmer to handle these exceptions explicitly in the code.
 
@@ -68,7 +68,7 @@ In this example:
 - **Client-Provided Input:** When the client (user or system) provides input, such as file paths, database credentials, or network settings. If invalid input is provided, exceptions can occur, and the program must handle these cases, often by prompting the user for corrections or fallback actions.
 
 ---
-**Unchecked Exceptions**
+### Unchecked Exceptions
 
 Unchecked Exceptions are exceptions that the compiler does not require to be explicitly handled or declared in the method signature. These exceptions typically represent programming bugs, such as logic errors or incorrect API usage, and they often cannot be easily recovered from at runtime.
 
@@ -88,7 +88,7 @@ Unchecked exceptions are typically used for errors that are beyond the control o
   - ClassCastException: Thrown when trying to cast an object to a type it is not an instance of.
 
 ---
-**Custom Exceptions**
+### Custom Exceptions
 
 Custom Exceptions are user-defined exception classes tailored to your application's specific domain. Rather than relying on generic exceptions (like IOException or NullPointerException), custom exceptions allow you to define more meaningful, application-specific errors that align with your business logic.
 
