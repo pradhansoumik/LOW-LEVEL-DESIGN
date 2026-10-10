@@ -1,11 +1,9 @@
 /**
  * Circuit Breaker = wait and retry later
  */
-public class CircuitBreakerExample
+@Service
+class PaymentService
 {
-/*
-    @Service
-    class PaymentService {
 
         @CircuitBreaker(name = "paymentService", fallbackMethod = "paymentFallback")
         public String charge(String userId, double amount)
@@ -20,11 +18,9 @@ public class CircuitBreakerExample
             log.error("Payment Service Down. Fallback triggered.");
             return "PAYMENT_FAILED";
         }
-    }
-*/
 }
 
-/*
+
     // Configuration Class
     @Bean
     public Customizer<CircuitBreakerConfigCustomizer> paymentCircuitBreakerConfig() {
@@ -36,9 +32,9 @@ public class CircuitBreakerExample
                 .automaticTransitionFromOpenToHalfOpenEnabled(true));
     }
 
-*/
 
-/*
+
+
 
 // Configuration via application.yml:
 
@@ -55,5 +51,5 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 2
         automaticTransitionFromOpenToHalfOpenEnabled: true
 
-*/
+
 

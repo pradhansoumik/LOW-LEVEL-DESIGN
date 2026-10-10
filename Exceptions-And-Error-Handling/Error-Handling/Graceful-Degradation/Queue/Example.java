@@ -1,4 +1,3 @@
-/*
 // Queue request's
 public void placeOrder(Order order)
 {
@@ -14,4 +13,3 @@ public void placeOrder(Order order)
         log.warn("Payment failed. Queued for retry.");
     }
 }
-*/

@@ -1,7 +1,5 @@
 public class Example
 {
-
-
         // Backoff strategy
         public String getETAWithBackoff() throws InterruptedException
         {

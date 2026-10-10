@@ -1,6 +1,5 @@
-public class Example {
-
-
+public class Example
+{
     // Naive retry example
     public String getETA()
     {
@@ -18,6 +17,5 @@ public class Example {
         }
         return "ETA unavailable";  // Return message if all retries fail
     }
-
 
 }

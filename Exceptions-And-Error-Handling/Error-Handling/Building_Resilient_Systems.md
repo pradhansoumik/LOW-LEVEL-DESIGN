@@ -50,3 +50,11 @@ Let's now understand the difference between the two systems:
 Imagine you're shopping on Amazon. When you try to purchase an item, the Amazon checkout page is a critical part of the transaction. If this page is part of a brittle system, and the payment service goes down, the entire checkout process may fail, causing the user to abandon the purchase and leading to a negative experience.
 
 However, if Amazon's checkout page is designed as a robust system, even if the payment service fails, the system could still allow the user to complete the purchase by hiding the recommendation service or by offering the ability to retry. This ensures that the user can still proceed without facing a complete breakdown, demonstrating how a robust system maintains functionality under partial failure.
+
+---
+
+### Please Refer:
+- [Graceful Degradation](./Graceful-Degradation/Notes.md)
+- [Retry Mechanisms](./RetryMechanisms/Notes.md)
+- [Circuit Breaker](./CircuitBreaker/Notes.md)
+- [Timeouts and Failovers](./Timeouts-and-Failovers/Notes.md)
