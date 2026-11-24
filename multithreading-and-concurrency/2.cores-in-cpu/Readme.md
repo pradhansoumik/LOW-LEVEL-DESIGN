@@ -31,7 +31,7 @@ Hyperthreading is a technology developed by Intel that allows a single physical 
 
 - In Hyperthreading, each logical core (created by the physical core) takes turns executing tasks.
 
-- Time slicing refers to dividing the core’s time between multiple threads, ensuring both threads get execution time without wasting resources.
+- **Time slicing** refers to dividing the core’s time between multiple threads, ensuring both threads get execution time without wasting resources.
 
 - This is done intelligently, so when one thread is waiting for data or performing a slower operation (like I/O), the other thread can continue executing, making better use of the core's resources.
 

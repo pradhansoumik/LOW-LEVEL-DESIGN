@@ -2,46 +2,40 @@
 
 ## Context Switching
 
-**Context Switching** is the process of storing and restoring the state (or context) of a thread or process so that it can be resumed later. This allows the CPU to switch between different tasks or threads without interrupting their execution entirely, giving the illusion of parallelism, even on a single-core system.
+Context Switching is the process of storing and restoring the state (or context) of a thread or process so that it can be resumed later. This allows the CPU to switch between different tasks or threads without interrupting their execution entirely, giving the illusion of parallelism, even on a single-core system.
 
-## Real Life Analogy
+### Real-life Analogy
 
-**Context Switching** is like a **chef in a kitchen** working on multiple dishes:
+Think of context switching like a **chef in a kitchen** who is working on multiple dishes:
 
-- Imagine a chef who is cooking a soup and suddenly needs to check on a roast in the oven.
-- To do this, they stop stirring the soup (save its current state), go to check the roast, and then return to the soup (restore the saved state) once the roast is handled.
-- The chef constantly switches between tasks, saving the progress of one dish while working on another, ensuring they return to the previous dish without losing any progress.
+- The chef is cooking a soup and suddenly needs to check on the roast in the oven.
+- To do this, they stop stirring the soup (save its current state), go to check the roast, and then return to the soup (restore the saved state) once the roast is done.
+- The chef switches between tasks, saving the current state of one dish while working on another, and then returns to the previous dish without losing progress.
 
----
+### How Does Context Switching Happen?
 
-## How Does Context Switching Happen?
+For the context switch to execute, the following steps are executed in order:
 
-For a context switch to execute, the following steps are performed in order:
+1. **Interrupt:** A context switch happens when a running thread is interrupted by the operating system or when a higher-priority thread needs to be executed.
+2. **Save State:** The state (such as registers, program counter, and other vital data) of the current thread is saved to memory, so that it can be resumed from the exact point it was paused.
+3. **Load State:** The state of the next thread or process to be executed is loaded from memory, allowing the CPU to pick up where that thread left off.
+4. **Switch Execution:** The CPU starts executing the new thread, continuing from where it was last stopped, and the process repeats when a new thread is scheduled.
 
-- **Interrupt**: A context switch is triggered when a running thread is interrupted by the operating system, or when a higher-priority thread needs to be executed.
-- **Save State**: The current state (such as CPU registers, program counter, and other vital data) of the running thread is saved to memory so it can be resumed from the exact point it was paused.
-- **Load State**: The saved state of the next thread or process scheduled for execution is retrieved and loaded from memory, allowing the CPU to pick up right where that thread left off.
-- **Switch Execution**: The CPU begins executing the new thread, continuing from its last stopped point, and the process repeats when a new thread is scheduled.
+### Importance of Context Switching
 
----
-
-## Importance of Understanding Context Switching
-
-- **Multitasking**: Allows multiple threads or processes to run "concurrently" on a single core by rapidly switching between them.
-- **Resource Management**: Ensures that no single task hogs the CPU, allowing for a better and fairer distribution of resources.
-- **Efficiency**: Enables the CPU to remain constantly busy, optimizing system performance even when handling multiple complex tasks.
-
----
+- **Multitasking:** Allows multiple threads or processes to run "concurrently" on a single core by switching between them rapidly.
+- **Resource Management:** Ensures that no single task hogs the CPU, allowing better distribution of resources.
+- **Efficiency:** Context switching enables the CPU to remain busy, optimizing performance even when handling multiple tasks.
 
 ## Thread Scheduler
 
-- The **Thread Scheduler** is a core component of the operating system that manages context switching. It decides exactly when a thread should be paused and which thread should run next.
-- The scheduler ensures efficient utilization of CPU resources, balancing the workload and giving the CPU time to execute multiple tasks fairly.
-- It uses specific **scheduling algorithms** (like Round-Robin, Priority-Based Scheduling, etc.) to determine thread priority, triggering a context switch as necessary.
+- The thread scheduler is the part of the operating system that manages context switching. It decides when a thread should be paused and another should be run.
 
----
+- The scheduler ensures efficient utilization of CPU resources, balancing the workload and giving the CPU time to execute multiple tasks.
 
-## Performance Considerations
+- It uses **scheduling algorithms** (like round-robin, priority-based scheduling, etc.) to determine which thread should run next, triggering a context switch as necessary.
 
-- **Task Scheduler Overhead**: The task scheduler requires dedicated CPU time to load and save the states of threads during a context switch, which adds implicit overhead to the system.
-- **Decreased Performance**: As the number of active threads increases, the total time spent on context switching can grow significantly. This leads to a performance degradation due to the extra CPU cycles spent on switching rather than executing tasks.
+### Performance Considerations
+
+- **Task Scheduler Overhead:** The task scheduler takes time to load and save the states of threads during context switching, which can add overhead to the system.
+- **Decreased Performance:** As the number of threads increases, the time spent on context switching can grow significantly, leading to a performance degradation due to the extra CPU cycles spent on switching rather than executing tasks.
