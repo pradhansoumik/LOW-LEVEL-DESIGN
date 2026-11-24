@@ -8,14 +8,14 @@ Instead of executing one task after another, multithreading allows the CPU to sw
 
 In simpler terms, multithreading breaks a program into smaller parts (**threads**) that can run in parallel. Each thread runs independently, but they share the same memory space, which allows them to communicate with each other and work together efficiently.
 
-## Significance of Multithreading
+### Significance of Multithreading
 
 - **Better Performance**: Multithreading allows tasks to run concurrently, improving overall performance by executing multiple tasks at once, like reading files and processing data in parallel.
 - **Non-blocking Nature**: Threads don't need to wait for each other, allowing non-blocking behavior. For example, one thread can process data while another waits for I/O operations like database queries.
 - **Resource Sharing**: Threads within the same process share memory and data, reducing overhead and allowing faster communication between threads, making them more efficient than separate processes.
 - **Scalability in Backend Services**: Multithreading helps scale backend services by handling multiple requests simultaneously, improving throughput and response time, especially in high-traffic applications.
 
-## Additional Benefits of Multithreading
+### Additional Benefits of Multithreading
 
 - **Responsiveness in UI Applications**: Multithreading offloads time-consuming tasks to background threads, keeping the main thread free to respond to user actions, improving UI responsiveness.
 - **Efficient CPU Utilization**: On multi-core processors, multithreading uses all cores, ensuring better CPU utilization and faster task execution.
@@ -23,11 +23,11 @@ In simpler terms, multithreading breaks a program into smaller parts (**threads*
 
 ---
 
-# Concurrency vs. Parallelism
+## Concurrency vs. Parallelism
 
 Learners often confuse Concurrency and Parallelism, considering them to be the same. However, it's important to understand the difference between the two as they represent different approaches to task execution in computing.
 
-## Key Differences
+### Key Differences
 
 | Concurrency | Parallelism |
 | :--- | :--- |
@@ -39,11 +39,11 @@ Learners often confuse Concurrency and Parallelism, considering them to be the s
 
 ---
 
-# Process vs. Thread
+## Process vs. Thread
 
 The terms Process and Thread are often confused by learners, but they represent two distinct concepts. Understanding the differences between the two is crucial for efficient software development. Let's break down the key distinctions between a process and a thread:
 
-## Key Differences
+### Key Differences
 
 | Process | Thread |
 | :--- | :--- |
@@ -56,17 +56,17 @@ The terms Process and Thread are often confused by learners, but they represent 
 | **Example**: A database instance like PostgreSQL, where each instance runs as a separate process. | **Example**: Individual tabs in a Chrome browser, where each tab is a thread within the browser process. |
 
 
-## Summary
+### Summary
 
 To summarize, processes are more isolated and independent, while threads are lighter, faster, and more interconnected. The choice between using a process or a thread depends on the requirements of the application, whether you need isolation and robustness (processes) or lightweight multitasking and shared resources (threads).
 
 ---
 
-# Shared Memory vs. Isolated Memory
+## Shared Memory vs. Isolated Memory
 
 In computing, memory plays a critical role in how processes and threads interact with each other. One key distinction in memory management is between shared memory and isolated memory. Understanding these two concepts is important for managing how data is accessed and how processes or threads communicate.
 
-## Key Differences
+### Key Differences
 
 | Shared Memory | Isolated Memory |
 | :--- | :--- |
@@ -77,17 +77,17 @@ In computing, memory plays a critical role in how processes and threads interact
 | Often used in multi-threaded applications, memory-mapped files, or shared memory regions in operating systems. | Common in processes with independent execution contexts, where memory isolation is needed for stability and security (e.g., web browsers, database processes). |
 | **Example**: A multi-threaded video processing application where different threads need to access and modify the same image data. | **Example**: Two independent processes such as a word processor and a web browser, where each has its own memory space and cannot access each other’s memory directly. |
 
-## Summary
+### Summary
 
 In summary, shared memory enables efficient communication and data sharing between threads and processes but comes with the challenge of ensuring synchronization and avoiding race conditions. On the other hand, isolated memory offers better security and stability by preventing direct access between processes but requires more complex communication mechanisms.
 
 ---
 
-# When to Use Thread and Process
+## When to Use Thread and Process
 
 In software development, choosing between using a thread or a process for executing tasks depends on the specific requirements of the application. Both threads and processes have distinct characteristics, and selecting the appropriate one can greatly affect the performance, reliability, and scalability of the system. Below are the guidelines for when to use each:
 
-## When to Use a Thread
+### When to Use a Thread
 
 - **Tasks Need to Share Data**: Threads share memory, making it easy to exchange data quickly and efficiently within the same process.
 - **Low Overhead is Important**: Threads are lightweight, with minimal overhead compared to processes, offering faster context switching.
@@ -96,7 +96,7 @@ In software development, choosing between using a thread or a process for execut
 - **Tightly Coupled Behavior**: Threads are suitable for tasks that are highly dependent on each other and need frequent communication.
 - **Responsiveness is Key**: Threads ensure the main task remains responsive by offloading time-consuming tasks to background threads.
 
-## When to Use a Process
+### When to Use a Process
 
 - **Tasks Require Isolation**: Processes run independently, with isolated memory, ensuring that tasks don’t interfere with each other.
 - **One Crash Shouldn’t Affect Others**: A crash in one process won’t affect others, providing better error isolation.
@@ -105,6 +105,6 @@ In software development, choosing between using a thread or a process for execut
 - **Resource Limits Needed**: Processes are useful when specific resource limits (e.g., CPU, memory) are required for tasks.
 - **Used by Different Users**: Processes provide isolation and security when tasks need to be executed by different users.
 
-## Conclusion
+### Conclusion
 
 In conclusion, choose **threads** when tasks need to share data, have low overhead, and are tightly coupled, such as in high-performance applications. Use **processes** when isolation, security, and fault tolerance are crucial, especially when tasks need to run independently or use different resources.
