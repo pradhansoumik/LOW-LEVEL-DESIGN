@@ -106,20 +106,20 @@ This is where **multithreading** comes into play. By executing tasks concurrentl
 
 ---
 
-# Implementing Multithreading - Different ways (Extending Thread Class, Runnable Interface, Callable Interface, ExecutorService)
+## Implementing Multithreading - Different ways (Extending Thread Class, Runnable Interface, Callable Interface, ExecutorService)
 
-## Implementing Multithreading by Extending the Thread Class
+### Implementing Multithreading by Extending the Thread Class
 
 In Java, multithreading can be implemented using many different ways. One such way is by creating a subclass of the `Thread` class and overriding its `run()` method. Each thread will execute the code inside the `run()` method, allowing concurrent execution of tasks.
 
-#### Key Concepts
+### Key Concepts
 
 - **Thread Class**: The `Thread` class is used to represent a thread in Java. By extending the `Thread` class, we can override its `run()` method to specify the operations or actions that the thread will perform. In other words, the `run()` method contains the code that defines what the thread will do when it is executed.
 - **`start()` Method**: This method is used to spawn and start a new thread of execution. It internally handles the thread lifecycle allocation and calls the `run()` method asynchronously.
 - **`join()` Method**: This method forces the calling thread (often the main thread) to pause and wait for the target thread to finish its execution before proceeding.
 
 
-#### Code
+### Code
 
 ```java
 import java.util.*;
@@ -194,15 +194,21 @@ class Main {
 ```
 **Explanation**
 
-The `SMSThread`, `EmailThread`, and `ETACalculationThread` classes extend `Thread` and override the `run()` method to simulate sending notifications with their respective delays.
-
+- The `SMSThread`, `EmailThread`, and `ETACalculationThread` classes extend `Thread` and override the `run()` method to simulate sending notifications with their respective delays.
 - The `start()` method initiates the execution of each thread asynchronously.
 - The `join()` method ensures the main thread pauses and waits for these tasks to finish before continuing.
 
-The previous code demonstrates three concurrent tasks running on separate threads by extending the `Thread` class.
+The above code demonstrates three concurrent tasks: sending an SMS, sending an email, and calculating the ETA, each using a separate thread by extending the Thread class.
 
 **Demerit: No Return Type in the `run()` Method**
 
 A key limitation of the `Thread` class in Java is that the `run()` method has a `void` return type and **cannot return a value**. This means if your background task computes a result—such as an ETA string—you cannot directly pass that value back to the caller from the `run()` method.
 
+This is a key drawback of using the Thread class for tasks that require returning values.
+
 > **Note**: Advanced techniques to retrieve a result from a running thread (such as using the `Callable` interface and `Future`) will be discussed in a later part of this article.
+
+References for further reading:
+
+- **Runnable** →  [Implementing Multithreading by Using the Runnable Interface](../6.creating-and-managing-threads/Runnable/Readme.md)
+- **Callable** →  [Implementing Multithreading by Using the Callable Interface](../6.creating-and-managing-threads/Callable/Readme.md)
